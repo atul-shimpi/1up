@@ -4,9 +4,10 @@
 /*global $form:true*/
 
 //set Public key for Stripe payments
-Stripe.setPublishableKey( 'pk_test_6pRNASCoBOKtIshFeQd4XMUh' );
+Stripe.setPublishableKey( 'pk_test_aBpIbF0y7KhCjC4fIpBnDhyI');
+//Stripe.setPublishableKey(('pk_live_mkY0uejiU6xG5n3B97WVKAEY');
 var isSubmit = false;
-$( document ).ready( function() {
+$(document).ready( function() {
     $( '#submittransaction' ).click( function() {
         console.log( 'ok' );
         if ( !isSubmit ) {
@@ -24,13 +25,15 @@ $( document ).ready( function() {
                     // response contains id and card, which contains additional card details
                     var token = response.id;
                     // Insert the token into the form so it gets submitted to the server
-                    $form.append( $( '<input type="hidden" name="stripeToken" />' ).val( token ) );
+                    //$form.append( $( '<input type="hidden" name="stripeToken" />' ).val( token ) );
+                    console.log(token);
+                    $('#carddetails').append( $( '<input type="hidden" name="stripeToken" />' ).val( token ) );
                     // and submit
                     $.ajax( {
                         url: '/createtransaction',
                         type: 'POST',
                         headers: {
-                            'x-access-token': $( '#token' ).html()
+                            'x-access-token': $('#token').html(),
                         },
                         data: {
                             amount: $( '#amount' ).val(),

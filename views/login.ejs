@@ -1,19 +1,78 @@
-<form action="/authenticate" method="POST">
-    <h1>Login to test page</h1>
-    <label for="name">Name: </label>
-    <input type="text" name="name" id="name">
-    <br>
-    <label for="password">Password: </label>
-    <input type="password" name="password" id="password">
-    <input type="submit" value="Login">
-</form>
+<link class="cssdeck" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" class="cssdeck">
 
-<form action="/register" method="POST">
-    <h1>Register to test page</h1>
-    <label for="name">Name: </label>
-    <input type="text" name="name" id="name">
-    <br>
-    <label for="password">Password: </label>
-    <input type="password" name="password" id="password">
-    <input type="submit" value="Register">
-</form>
+<div class="" id="loginModal">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+		<h3>Already having Account?</h3>
+	</div>
+	<div class="modal-body">
+		<div class="well">
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#login" data-toggle="tab">Login</a></li>
+				<li><a href="#create" data-toggle="tab">Create Account</a></li>
+			</ul>
+			<div id="myTabContent" class="tab-content">
+				<div class="tab-pane active in" id="login">
+					<form class="form-horizontal" action="/authenticate" method="POST">
+						<fieldset>
+							<div id="legend">
+								<legend class="">Login</legend>
+							</div>    
+							<div class="control-group">							
+								<label class="control-label"  for="name">Email</label>
+								<div class="controls">
+									<input type="text" id="name" name="name" placeholder="" class="form-control input-sm" value="shimpiatul@hotmail.com">
+								</div>
+							</div>
+							
+							<div class="control-group">							
+								<label class="control-label" for="password">Password</label>
+								<div class="controls">
+									<input type="password" id="password" name="password" placeholder="" class="input-xlarge" value="12345678">
+								</div>
+							</div>
+							
+							
+							<div class="control-group">
+								<!-- Button -->
+								<div class="controls">
+									<button class="btn btn-success">Login</button>
+								</div>
+							</div>
+						</fieldset>
+					</form>                
+				</div>
+				<div class="tab-pane fade" id="create">					
+					<form class="form-horizontal" id="tab" action="/register" method="POST">	
+          
+          <div id="legend">
+								<legend class="">Create Account</legend>
+							</div>  
+              
+						<div class="control-group">							
+								<label class="control-label"  for="name">Email</label>
+								<div class="controls">
+									<input type="text" id="name" name="name" placeholder="" class="input-xlarge">
+								</div>
+							</div>
+              
+              <div class="control-group">							
+								<label class="control-label" for="password">Password</label>
+								<div class="controls">
+									<input type="password" id="password" name="password" placeholder="" class="input-xlarge">
+								</div>
+							</div>
+              
+						<div>
+							<button class="btn btn-primary">Create Account</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<script class="cssdeck" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script class="cssdeck" src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+

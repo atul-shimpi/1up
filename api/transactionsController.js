@@ -19,6 +19,16 @@ exports.index = function( req, res, next ) {
 };
 
 exports.createTransaction = function( req, res, next ) {
+  console.log("inside createTransaction");
+  
+  //var Stripe = require("stripe")(
+  //"sk_test_vY8KmXjykWPpNwZINL9b5my2"
+//);
+
+ var Stripe = require("stripe")(
+  config.secret
+);
+
 
     Stripe.charges.create( {
         amount: req.body.amount,
@@ -27,6 +37,7 @@ exports.createTransaction = function( req, res, next ) {
         description: 'Charge for test@example.com'
     }, function( err, charge ) {
         if ( err ) {
+           
             return console.log( err );
         }
         var transaction = new Transactions( {
