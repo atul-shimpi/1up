@@ -27,13 +27,17 @@ router.get( '/login', function( req, res ) {
 router.post( '/createtransaction', transactionController.createTransaction );
 
 router.use( function( req, res, next ) {
-
+   console.log("inside router.use");
+ //console.log(req);
     // check header or url parameters or post parameters for token
     var token = req.body.token || req.query.token || req.headers[ 'x-access-token' ];
+     //var token = req.headers[ 'x-access-token' ];
+    console.log("Token xxxx: " + req.query.stripeToken);
     // decode token
     if ( token ) {
         // verifies secret and checks exp
         jwt.verify( token, config.secret, function( err, decoded ) {
+          console.log(err);
             if ( err ) {
                 return res.json( {
                     success: false,
