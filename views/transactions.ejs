@@ -5,7 +5,7 @@
 
 <h2>Create Stripe Payments</h2>
 
-<form class="form-horizontal" action="/authenticate" method="POST" id="carddetails" name="carddetails">
+<form class="form-horizontal" id="carddetails" name="carddetails">
   <fieldset>
     <div class="control-group">							
 			<label class="control-label"  for="name">Amount</label>
@@ -24,21 +24,21 @@
   <div class="control-group">							
 	  <label class="control-label"  for="cardnumber">Card number</label>
 		<div class="controls">
-		  <input type="text" id="cardnumber" name="customerid" placeholder="" class="input-xlarge" value="4386280019343445">
+		  <input type="text" id="cardnumber" name="customerid" placeholder="" class="input-xlarge card-number" value="4386280019343445">
 		</div>
 	</div>
    
   <div class="control-group">							
 	  <label class="control-label"  for="cvc">CVC</label>
 		<div class="controls">
-		  <input type="number" id="cvc" name="cvc" placeholder="" class="input-xlarge" value="190">
+		  <input type="number" id="cvc" name="cvc" placeholder="" class="input-xlarge card-cvc" value="190">
 		</div>
 	</div>
     
   <div class="control-group">							
 	  <label class="control-label"  for="card-expiry-month">Expired Month</label>
 		<div class="controls">
-		  <input type="number" id="card-expiry-month" name="card-expiry-month" placeholder="" class="input-xlarge" value="01">
+		  <input type="number" id="card-expiry-month" name="card-expiry-month" placeholder="" class="input-xlarge card-expiry-month" value="01">
 		</div>
 	</div>
  
@@ -46,7 +46,7 @@
   <div class="control-group">							
 	  <label class="control-label"  for="card-expiry-year">Expiry Year</label>
 		<div class="controls">
-		  <input type="number" id="card-expiry-year" name="card-expiry-year" placeholder="" class="input-xlarge" value="2017">
+		  <input type="number" id="card-expiry-year" name="card-expiry-year" placeholder="" class="input-xlarge card-expiry-year" value="2017">
 		</div>
 	</div>
     
