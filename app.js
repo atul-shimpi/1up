@@ -9,9 +9,9 @@ var bodyParser = require( 'body-parser' );
 var expressLayouts = require( 'express-ejs-layouts' );
 var jwt = require( 'jsonwebtoken' );
 var config = require( './config' );
-var stripe = require("stripe")(
-  "sk_test_vY8KmXjykWPpNwZINL9b5my2"
-);
+//var stripe = require("stripe")(
+ // "sk_test_vY8KmXjykWPpNwZINL9b5my2"
+//);
 
 
 var routes = require( './routes/index' );
