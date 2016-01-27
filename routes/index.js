@@ -49,13 +49,7 @@ router.use( function( req, res, next ) {
 
     }
     else {
-       res.redirect('/login');
-        // if there is no token
-        // return an error
-        //return res.status( 200 ).send( {
-           // success: false,
-            //message: 'No token provided.'
-        //} );
+       res.redirect('/login');        
     }
 } );
 
