@@ -24,6 +24,8 @@ router.get( '/login', function( req, res ) {
     } );
 } );
 
+router.post( '/createtransaction', transactionController.createTransaction );
+
 router.use( function( req, res, next ) {
 
     // check header or url parameters or post parameters for token
@@ -58,6 +60,6 @@ router.use( function( req, res, next ) {
 } );
 
 
-router.post( '/createtransaction', transactionController.createTransaction );
+
 
 module.exports = router;

@@ -20,6 +20,10 @@ exports.index = function( req, res, next ) {
 
 exports.createTransaction = function( req, res, next ) {
 
+  var Stripe = require("stripe")(
+    config.secret
+  );
+
     Stripe.charges.create( {
         amount: req.body.amount,
         currency: req.body.currency,

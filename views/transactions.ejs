@@ -3,17 +3,19 @@
 
 <h2>Create Stripe Payments</h2>
 
+<form id=carddetails class="carddetails">
 <label for="amount">Amount:</label>
-<input type="number" name="amount" id="amount"><br>
+<input type="number" name="amount" id="amount" value="50"><br>
 <label for="currency">Currency: </label>
-<input type="text" name="currency" id="currency"><br>
+<input type="text" name="currency" id="currency" value="cents"><br>
 <label for="cardnumber">Card number </label>
-<input type="text" name="customerid" id="cardnumber" class="card-number"><br>
+<input type="text" name="customerid" id="cardnumber" class="card-number" value="4000000000000077"><br>
 <label for="cvc">CVC: </label>
-<input type="number" name="cvc" id="cvc" class="card-cvc"><br>
+<input type="number" name="cvc" id="cvc" class="card-cvc" value="190"><br>
 <label for="card-expiry-month">Expired Month: </label>
-<input type="number" name="card-expiry-month" id="card-expiry-month" class="card-expiry-month"><br>
+<input type="number" name="card-expiry-month" id="card-expiry-month" class="card-expiry-month" value="01"><br>
 <label for="card-expiry-year">Expired Year: </label>
-<input type="number" name="card-expiry-year" id="card-expiry-year" class="card-expiry-year"><br>
+<input type="number" name="card-expiry-year" id="card-expiry-year" class="card-expiry-year" value="2017"><br>
 <p class="payment-errors"></p>
 <input type="button" class="submittransaction" id="submittransaction" value="Submit">
+</form>
