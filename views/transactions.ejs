@@ -1,58 +1,19 @@
-<link class="cssdeck" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" class="cssdeck">
 <h1>Transactions page</h1>
 <p>Your token:<span id="token"><%=token%></span></p>
 
 <h2>Create Stripe Payments</h2>
 
-<form class="form-horizontal" id="carddetails" name="carddetails">
-  <fieldset>
-    <div class="control-group">							
-			<label class="control-label"  for="name">Amount</label>
-			<div class="controls">
-			  <input type="text" id="amount" name="amount" placeholder="" class="input-xlarge" value="1">
-			</div>
-	  </div>
-    
-  <div class="control-group">							
-	  <label class="control-label"  for="currency">Currency</label>
-		<div class="controls">
-		  <input type="text" id="currency" name="currency" placeholder="" class="input-xlarge" value="USD">
-		</div>
-	</div>
-   
-  <div class="control-group">							
-	  <label class="control-label"  for="cardnumber">Card number</label>
-		<div class="controls">
-		  <input type="text" id="cardnumber" name="customerid" placeholder="" class="input-xlarge card-number">
-		</div>
-	</div>
-   
-  <div class="control-group">							
-	  <label class="control-label"  for="cvc">CVC</label>
-		<div class="controls">
-		  <input type="number" id="cvc" name="cvc" placeholder="" class="input-xlarge card-cvc">
-		</div>
-	</div>
-    
-  <div class="control-group">							
-	  <label class="control-label"  for="card-expiry-month">Expired Month</label>
-		<div class="controls">
-		  <input type="number" id="card-expiry-month" name="card-expiry-month" placeholder="" class="input-xlarge card-expiry-month" value="01">
-		</div>
-	</div>
- 
-  
-  <div class="control-group">							
-	  <label class="control-label"  for="card-expiry-year">Expiry Year</label>
-		<div class="controls">
-		  <input type="number" id="card-expiry-year" name="card-expiry-year" placeholder="" class="input-xlarge card-expiry-year" value="2017">
-		</div>
-	</div>
-    
-  <p class="payment-errors"></p>  
-  <div>
-		<button class="btn btn-primary" class="submittransaction" id="submittransaction">Make Payment</button>
-	</div>
-  </fieldset>
-</form>
+<label for="amount">Amount:</label>
+<input type="number" name="amount" id="amount"><br>
+<label for="currency">Currency: </label>
+<input type="text" name="currency" id="currency"><br>
+<label for="cardnumber">Card number </label>
+<input type="text" name="customerid" id="cardnumber" class="card-number"><br>
+<label for="cvc">CVC: </label>
+<input type="number" name="cvc" id="cvc" class="card-cvc"><br>
+<label for="card-expiry-month">Expired Month: </label>
+<input type="number" name="card-expiry-month" id="card-expiry-month" class="card-expiry-month"><br>
+<label for="card-expiry-year">Expired Year: </label>
+<input type="number" name="card-expiry-year" id="card-expiry-year" class="card-expiry-year"><br>
+<p class="payment-errors"></p>
+<input type="button" class="submittransaction" id="submittransaction" value="Submit">
