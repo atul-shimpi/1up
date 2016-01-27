@@ -40,7 +40,8 @@ $(document).ready( function() {
                             currency: $( '#currency' ).val(),
                             token: token
                         }
-                    } ).done( function( response ) {
+                    } ).done( function( response) {
+                        console.log(response.message);
                         if ( response.message ) {
                             $( '.payment-errors' ).text( response.message );
                         }
